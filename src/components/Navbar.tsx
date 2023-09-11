@@ -16,16 +16,13 @@ const Header = () => {
             <nav>
               <ul className="flex items-center space-x-6">
                 <li>
-                  <a
-                    href="index.html"
-                    className="text-gray-800 hover:text-gray-600"
-                  >
+                  <a href="/" className="text-gray-800 hover:text-gray-600">
                     Home
                   </a>
                 </li>
                 <li>
                   <a
-                    href="shop.html"
+                    href="/products"
                     className="text-gray-800 hover:text-gray-600"
                   >
                     View All Products
@@ -33,7 +30,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="Aboutus.html"
+                    href="/about"
                     className="text-gray-800 hover:text-gray-600"
                   >
                     About Us

@@ -4,11 +4,19 @@ import {ProductCarousel} from "./components/ProductCarousel";
 import ProductSection from "./components/ProductSection";
 import ProductPage from "./page/ProductPage";
 import AboutUs from "./page/AboutUsPage";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {HomePage} from "./page/HomePage";
 function App() {
   return (
     <div>
       <Header></Header>
-      <AboutUs></AboutUs>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/product" element={<ProductPage />}></Route>
+          <Route path="/about" element={<AboutUs />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
