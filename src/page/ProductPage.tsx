@@ -1,33 +1,42 @@
 import React from "react";
 import {ProductInformation} from "../components/ProductDescription";
-
+import ProductCategory from "../components/ProductCategory";
+import {ProductInfo} from "../types/types";
 function ProductPage() {
-  const products = [
+  const products: ProductInfo[] = [
     {
-      title: "Wrought Iron Door",
+      name: "Wrought Iron Door",
       description:
         "This is a custom-made Wrought Iron Door. It features unique designs and patterns...",
-      images: [
-        "assets/img/customworks/iron door1.jpg",
-        "assets/img/customworks/iron door2.jpg",
-      ],
+      imgSrc: "assets/img/customworks/iron door.jpg",
+      category: "door",
     },
     {
-      title: "Interior Doors",
-      description: "Our interior doors are crafted with attention to detail...",
-      images: [
-        "assets/img/customworks/interior door1.jpg",
-        "assets/img/customworks/interior door2.jpg",
-      ],
+      name: "Wrought Iron Door",
+      description:
+        "This is a custom-made Wrought Iron Door. It features unique designs and patterns...",
+      imgSrc: "assets/img/customworks/iron door.jpg",
+      category: "door",
     },
-    // ... add more products as needed
+    {
+      name: "Wrought Iron Door",
+      description:
+        "This is a custom-made Wrought Iron Door. It features unique designs and patterns...",
+      imgSrc: "assets/img/customworks/iron door.jpg",
+      category: "Interior Door",
+    },
+    {
+      name: "Wrought Iron Door",
+      description:
+        "This is a custom-made Wrought Iron Door. It features unique designs and patterns...",
+      imgSrc: "assets/img/customworks/iron door.jpg",
+      category: "Another",
+    },
   ];
 
   return (
     <div className="container mx-auto p-4 md:p-8">
-      {products.map((product, index) => (
-        <ProductInformation key={index} product={product} />
-      ))}
+      <ProductCategory products={products} />
     </div>
   );
 }
