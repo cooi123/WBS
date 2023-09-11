@@ -36,6 +36,14 @@ const Header = () => {
                     About Us
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/contact"
+                    className="text-gray-800 hover:text-gray-600"
+                  >
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -84,6 +92,12 @@ const Header = () => {
             className="mt-2 block text-gray-800 hover:text-gray-600"
           >
             About Us
+          </a>
+          <a
+            href="/contact"
+            className="mt-2 block text-gray-800 hover:text-gray-600"
+          >
+            Contact Us
           </a>
         </div>
       </div>

@@ -36,8 +36,6 @@ function AboutUs() {
       {aboutUsSection.map((section, index) => (
         <Section key={index} title={section.title} content={section.content} />
       ))}
-      <ContactUs />
-      <VisitUs />
     </div>
   );
 }
@@ -47,36 +45,6 @@ function Section({title, content}: {title: string; content: string}) {
     <div className="mb-12 bg-gray-50 p-6 rounded-md shadow-sm">
       <h3 className="text-2xl font-semibold mb-4">{title}</h3>
       <p>{content}</p>
-    </div>
-  );
-}
-
-function ContactUs() {
-  return (
-    <div className="mb-12 bg-gray-50 p-6 rounded-md shadow-sm">
-      <h3 className="text-2xl font-semibold mb-4">Contact Us</h3>
-      <p>
-        If you have any questions or inquiries, feel free to get in touch with
-        us. We're here to help!
-      </p>
-      <div className="mt-4 space-y-2">
-        <div className="flex items-center">
-          <span className="font-bold w-20">Phone:</span> 0451548889
-        </div>
-        <div className="flex items-center">
-          <span className="font-bold w-20">Email:</span> auswbs@gmail.com
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function VisitUs() {
-  return (
-    <div className="mb-12 bg-gray-50 p-6 rounded-md shadow-sm">
-      <h3 className="text-2xl font-semibold mb-4">Visit Us</h3>
-      <p></p>
-      <GoogleMap />
     </div>
   );
 }
