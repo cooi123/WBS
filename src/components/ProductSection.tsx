@@ -3,13 +3,13 @@ import React from "react";
 function ProductSection() {
   const products = [
     {
-      img: "assets/img/customworks/iron door.jpg",
+      img: "./asserts/ironDoor.jpg",
       link: "IronDoor.html",
       title: "Wrought Iron Door",
       description: "Custom Dimensions and Patterns",
     },
     {
-      img: "assets/img/customworks/interior door.jpg",
+      img: "./asserts/interiorDoors.jpg",
       link: "InteriorDoors.html",
       title: "Interior Doors",
     },
@@ -22,6 +22,21 @@ function ProductSection() {
       img: "assets/img/customworks/cabinets.jpg",
       link: "InteriorDoors.html",
       title: "Cabinets",
+    },
+    {
+      img: "./asserts/cornice.jpg",
+      link: "Cornice.html",
+      title: "Cornice",
+    },
+    {
+      img: "./asserts/tolietSuite.jpg",
+      link: "TolietSuite.html",
+      title: "TolietSuite",
+    },
+    {
+      img: "assets/img/customworks/cabinets.jpg",
+      link: "Skirting.html",
+      title: "Skirting",
     },
   ];
 
@@ -36,10 +51,10 @@ function ProductSection() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4">
           {products.map((product, index) => (
             <div key={index} className="col-span-1 mb-6 md:mb-11.25">
-              <div className="bg-white border p-2 md:p-4">
+              <div className="bg-white border p-2 md:p-5">
                 <div className="relative">
                   <img
-                    className="w-1/3 md:w-1/2 h-24 md:h-48 object-cover mx-auto"
+                    className="w-300 h-200 object-cover mx-auto"
                     src={product.img}
                     alt="Product"
                   />
@@ -52,7 +67,7 @@ function ProductSection() {
                     </a>
                   </div>
                   {product.description && (
-                    <h3 className="mt-1 md:mt-2">
+                    <h3 className="mt-1 md:mt-3">
                       <a href={product.link} className="hover:text-blue-600">
                         {product.description}
                       </a>
