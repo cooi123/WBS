@@ -1,5 +1,6 @@
 import {ProductInfo} from "../types/types";
 import ProductCard from "./ProductCard";
+import React, {useState} from "react";
 function Category({
   categoryName,
   products,
@@ -14,7 +15,7 @@ function Category({
     <div>
       <h2 className="text-2xl font-semibold mb-4">{categoryName}</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="flex flex-wrap ">
         {productsInCategory.map((product) => (
           <ProductCard key={product.name} product={product} />
         ))}
@@ -23,15 +24,47 @@ function Category({
   );
 }
 function ProductCategory({products}: {products: ProductInfo[]}) {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
   const categories = Array.from(
     new Set(products.map((product) => product.category))
   );
-  console.log(products);
+
   return (
     <div className="my-8">
-      {categories.map((category) => (
-        <Category key={category} categoryName={category} products={products} />
-      ))}
+      <div className="mb-4">
+        <label htmlFor="categorySelect" className="mr-2">
+          Filter by category:
+        </label>
+        <select
+          id="categorySelect"
+          onChange={(e) =>
+            setSelectedCategory(
+              e.target.value === "all" ? null : e.target.value
+            )
+          }
+          className="border rounded p-2"
+        >
+          <option value="all">All Categories</option>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {categories
+        .filter(
+          (category) => !selectedCategory || category === selectedCategory
+        )
+        .map((category) => (
+          <Category
+            key={category}
+            categoryName={category}
+            products={products}
+          />
+        ))}
     </div>
   );
 }

@@ -4,7 +4,7 @@ function ProductSection() {
   const products = [
     {
       img: "./asserts/ironDoor.jpg",
-      link: "IronDoor.html",
+      link: "/wroughtIronDoor",
       title: "Wrought Iron Door",
       description: "Custom Dimensions and Patterns",
     },
@@ -14,12 +14,12 @@ function ProductSection() {
       title: "Interior Doors",
     },
     {
-      img: "assets/img/customworks/architrave.jpg",
+      img: "./asserts/architrave.jpg",
       link: "PreprimedArchitrave.html",
       title: "Preprimed Architrave",
     },
     {
-      img: "assets/img/customworks/cabinets.jpg",
+      img: "./asserts/cabinet.jpg",
       link: "InteriorDoors.html",
       title: "Cabinets",
     },
@@ -34,7 +34,7 @@ function ProductSection() {
       title: "TolietSuite",
     },
     {
-      img: "assets/img/customworks/cabinets.jpg",
+      img: "./asserts/skirting.jpg",
       link: "Skirting.html",
       title: "Skirting",
     },

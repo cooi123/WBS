@@ -5,23 +5,22 @@ import "slick-carousel/slick/slick-theme.css";
 
 const products = [
   {
-    img: "assets/img/customworks/iron door.jpg",
-    link: "IronDoor.html",
+    img: "./asserts/WroughIronDoor/prod-21-700x778.png",
+    link: "wroughtIronDoor",
     title: "Wrought Iron Door",
-    description: "Custom Dimensions and Patterns",
   },
   {
-    img: "assets/img/customworks/interior door.jpg",
+    img: "./asserts/InteriorDoors.jpg",
     link: "InteriorDoors.html",
     title: "Interior Doors",
   },
   {
-    img: "assets/img/customworks/architrave.jpg",
+    img: "./asserts/architrave.jpg",
     link: "PreprimedArchitrave.html",
     title: "Preprimed Architrave",
   },
   {
-    img: "assets/img/customworks/cabinets.jpg",
+    img: "./asserts/cabinet.jpg",
     link: "InteriorDoors.html",
     title: "Cabinets",
   },
@@ -31,6 +30,8 @@ export function ProductCarousel() {
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -42,9 +43,9 @@ export function ProductCarousel() {
         {products.map((product, idx) => (
           <div key={idx} className="p-4">
             <div className="bg-white shadow-md rounded overflow-hidden">
-              <div className="relative">
+              <div className="relative w-full max-w-sm mx-auto pb-[56.25%]">
                 <img
-                  className="w-full h-48 object-cover"
+                  className="absolute top-0 left-0 w-full h-full"
                   src={product.img}
                   alt="Product"
                 />
@@ -59,13 +60,6 @@ export function ProductCarousel() {
                     {product.title}
                   </a>
                 </div>
-                {product.description && (
-                  <h3 className="mt-2 text-base">
-                    <a href={product.link} className="hover:text-blue-600">
-                      {product.description}
-                    </a>
-                  </h3>
-                )}
               </div>
             </div>
           </div>

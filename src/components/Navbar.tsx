@@ -8,8 +8,8 @@ const Header = () => {
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div>
-            <a className="text-gray-800 text-xl font-bold" href="index.html">
-              <img src="assets/img/logo/logo.png" alt="Logo" className="h-8" />
+            <a className="text-gray-800 text-xl font-bold" href="/">
+              <img src="./asserts/logo.png" alt="Logo" className="h-8" />
             </a>
           </div>
           <div className="hidden md:flex items-center">
