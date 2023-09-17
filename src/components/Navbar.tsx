@@ -75,20 +75,17 @@ const Header = () => {
             isMobileMenuOpen ? "block mt-4" : "hidden mt-4 mobile-menu"
           }
         >
-          <a
-            href="index.html"
-            className="block text-gray-800 hover:text-gray-600"
-          >
+          <a href="/" className="block text-gray-800 hover:text-gray-600">
             Home
           </a>
           <a
-            href="shop.html"
+            href="/products"
             className="mt-2 block text-gray-800 hover:text-gray-600"
           >
             View All Products
           </a>
           <a
-            href="Aboutus.html"
+            href="/about"
             className="mt-2 block text-gray-800 hover:text-gray-600"
           >
             About Us
